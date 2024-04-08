@@ -155,7 +155,6 @@ tasks.register("runQuilt", JavaExec) {
 
 
     jvmArgs = [
-            "-Dloader.development=true", // Allows stuff to be found through the classpath
             "-Dloader.gameJarPath=" + configurations.cosmicreach.asPath, // Defines path to Cosmic Reach
     ]
 
