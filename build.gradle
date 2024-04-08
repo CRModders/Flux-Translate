@@ -43,6 +43,10 @@ repositories {
         url "https://jitpack.io"
     }
     maven {
+        name "CRModders Maven"
+        url "https://maven.crmodders.dev/releases"
+    }
+    maven {
         name "Quilt"
         url "https://maven.quiltmc.org/repository/release"
     }
@@ -155,6 +159,7 @@ tasks.register("runQuilt", JavaExec) {
 
 
     jvmArgs = [
+            "-Dloader.development=true", // Allows stuff to be found through the classpath
             "-Dloader.gameJarPath=" + configurations.cosmicreach.asPath, // Defines path to Cosmic Reach
     ]
 
