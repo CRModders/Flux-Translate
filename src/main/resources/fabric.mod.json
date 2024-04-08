@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.crmodders.fluxtranslations.FluxTranslations"
+      "dev.crmodders.flux_translate.FluxTranslations"
     ]
   },
   "mixins": [
