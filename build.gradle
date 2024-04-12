@@ -87,7 +87,7 @@ configurations {
 
 shadowJar {
     configurations = [project.configurations.shadowMe]
-    mainClassName = "dev.crmodders.flux.FluxAPI"
+    mainClassName = ""
 }
 
 
@@ -102,7 +102,7 @@ dependencies {
 
     // Modmenu
     internal("org.codeberg.CRModders:modmenu:${modmenu_version}")
-    internal("dev.crmodders:FluxAPI:${flux_api_version}")
+    internal("dev.crmodders:fluxapi:${flux_api_version}")
 }
 
 processResources {

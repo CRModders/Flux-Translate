@@ -6,7 +6,6 @@ import dev.crmodders.flux.api.events.GameEvents;
 import dev.crmodders.flux.localization.LanguageFile;
 import dev.crmodders.flux.localization.TranslationApi;
 import dev.crmodders.flux.logging.LogWrapper;
-import finalforeach.cosmicreach.GameAssetLoader;
 import finalforeach.cosmicreach.io.SaveLocation;
 import net.fabricmc.api.ModInitializer;
 
@@ -27,7 +26,7 @@ public class FluxTranslations implements ModInitializer {
         GameEvents.ON_GAME_INITIALIZED.register(() -> {
             for (File file : Objects.requireNonNull(LangDir.listFiles())) {
                 try {
-                    TranslationApi.registerLanguage(
+                    TranslationApi.registerLanguageFile(
                             LanguageFile.loadLanguageFile(Gdx.files.absolute(file.getAbsolutePath()))
                     );
                 } catch (IOException e) {
